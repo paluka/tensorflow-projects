@@ -111,7 +111,8 @@ history = model.fit(
 
 loss, accuracy = model.evaluate(test_ds)
 
-print(loss, accuracy)
+print(f"\nThe loss is {loss}")
+print(f"The accuracy is {accuracy * 100}%\n")
 
 history_dict = history.history
 history_dict.keys()
@@ -149,7 +150,8 @@ export_model.compile(
 )
 
 loss, accuracy = export_model.evaluate(raw_test_ds)
-print(loss, accuracy)
+print(f"\nThe loss is {loss}")
+print(f"The accuracy is {accuracy * 100}%\n")
 
 new_inferences = ["The movie was great!", "The movie was okay.", "The movie sucked"]
 
